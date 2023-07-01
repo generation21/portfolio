@@ -11,22 +11,22 @@ import styles from "src/styles/NavigationBar.module.css";
 export default function NavigationBar({ pathname }) {
     const portfolios = [
         {
-            title: "나를 소개해줘",
+            title: "Tell me about SB",
             path: HOME_PATH,
             icon: <BiMessage className={styles.icon} />,
         },
         {
-            title: "나에 대해서 알려줘",
+            title: "Tell me about SB's Features",
             path: ABOUT_PATH,
             icon: <BiMessage className={styles.icon} />,
         },
         {
-            title: "내 프로젝트를 소개해줘",
+            title: "Tell me about SB's Projects",
             path: PROJECTS_PATH,
             icon: <BiMessage className={styles.icon} />,
         },
         {
-            title: "내 스킬에 대해서 알려줘",
+            title: "Tell me about SB's Papers",
             path: SKILLS_PATH,
             icon: <BiMessage className={styles.icon} />,
         },
