@@ -1,0 +1,90 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: var(--side-bar-width);
+    height: 100%;
+    background-color: var(--color-background);
+}
+
+.menue {
+    display: flex;
+    align-items: center;
+}
+
+.newchat {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0.8rem;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: 1rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 12px;
+    width: 70%;
+}
+.newchat:hover {
+    background-color: var(--color-cloud);
+    border-radius: 0.375rem;
+}
+
+.hide_slider {
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.hide_slider:hover {
+    background-color: var(--color-cloud);
+    border-radius: 0.375rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+    margin: 1rem 1.2rem;
+    gap: 1rem;
+}
+.container:hover {
+    background-color: var(--color-cloud);
+    border-radius: 0.375rem;
+}
+
+.icon {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.title {
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+    background-color: var(--color-background);
+}
+.button:hover {
+    background-color: var(--color-cloud);
+    border-radius: 0.375rem;
+}
+
+.items {
+    display: flex;
+    gap: 1rem;
+}

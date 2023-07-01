@@ -1,0 +1,25 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.typeit {
+    color: var(--color-accent);
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(5%);
+    }
+}
+
+.title {
+    animation: slideDown 2s linear infinite;
+}

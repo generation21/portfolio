@@ -1,13 +1,90 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+#root {
+    width: 100%;
+
+    height: 100%;
+}
+
+/* CSS */
+:root {
+    /* App Colors */
+    --color-primary: var(--color-gray);
+    --color-primary-variant: var(--color-bold-gray);
+    --color-background: var(--color-black);
+
+    --color-accent: var(--color-purple);
+    --color-accent-variant: var(--color-orange);
+    --color-text: var(--color-white);
+    --color-text-secondary: var(--light-gray);
+
+    --color-border: hsla(0, 0%, 100%, 0.2);
+    --side-font-size: 0.825rem;
+    /* Colors */
+    --color-white: #ffffff;
+    --color-black: #1f2123;
+    --color-blue: #03e8f9;
+    --color-orange: #fd6413;
+    --color-gray: #444754;
+    --color-bold-gray: #343540;
+    --color-cloud: #c5c6d0;
+    --color-purple: #ab68ff;
+    --light-gray: #868698;
+
+    /* Sider Bar  */
+    --side-bar-width: 330px;
+    --side-bar-half-width: 165px;
+    /* Background */
+    --home-bg-gradient: linear-gradient(
+        200deg,
+        rgba(18, 35, 64, 1) 82%,
+        rgba(5, 10, 19, 1) 100%
+    );
+}
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a,
+Link {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+button {
+    background-color: transparent;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 1px solid transparent;
 }
