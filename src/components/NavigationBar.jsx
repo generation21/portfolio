@@ -8,7 +8,7 @@ import { RiBookletFill } from "react-icons/ri";
 import { SiTistory } from "react-icons/si";
 import styles from "src/styles/NavigationBar.module.css";
 import NewChat from "./NewChat";
-import Contact from "./Contact";
+import Information from "./Information";
 
 export default function NavigationBar({ pathname }) {
     const portfolios = [
@@ -91,7 +91,7 @@ export default function NavigationBar({ pathname }) {
                     <p className={styles.title}>홍승범</p>
                 </button>
                 {isContactOpen && (
-                    <Contact
+                    <Information
                         key={"Contact"}
                         handleOnClickIsOpen={handleOnClickContact}
                     />
