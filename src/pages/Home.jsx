@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "src/styles/Home.module.css";
-import TypeIt from "typeit-react";
 import { RiOpenaiFill } from "react-icons/ri";
-// This could be any component that generates HTML.
-const SuperStrong = ({ children }) => {
-    return <strong style={{ fontSize: "80px" }}>{children}</strong>;
-};
 
 export default function Home() {
     const phrases = [

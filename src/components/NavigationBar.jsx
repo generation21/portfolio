@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ABOUT_PATH, HOME_PATH, PROJECTS_PATH, SKILLS_PATH } from "src/App";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
@@ -7,6 +7,7 @@ import { FaPlus } from "react-icons/fa";
 import { RiBookletFill } from "react-icons/ri";
 import { SiTistory } from "react-icons/si";
 import styles from "src/styles/NavigationBar.module.css";
+import NewChat from "./NewChat";
 
 export default function NavigationBar({ pathname }) {
     const portfolios = [
@@ -32,11 +33,27 @@ export default function NavigationBar({ pathname }) {
         },
     ];
 
+    const [isOpen, setIsOpen] = useState(false);
+    const handleOnClickIsOpen = () => {
+        setIsOpen(false);
+    };
+
     return (
         <nav className={styles.navigation}>
             <div>
+                {isOpen && (
+                    <NewChat
+                        key={"newChat"}
+                        handleOnClickIsOpen={handleOnClickIsOpen}
+                    />
+                )}
                 <div className={styles.menue}>
-                    <button className={styles.newchat}>
+                    <button
+                        className={styles.newchat}
+                        onClick={() => {
+                            setIsOpen(true);
+                        }}
+                    >
                         <FaPlus />
                         New chat
                     </button>
@@ -57,7 +74,7 @@ export default function NavigationBar({ pathname }) {
                 <button className={styles.button}>
                     <img
                         src="/image/favicon.ico"
-                        alt="profile image"
+                        alt="profile"
                         width={40}
                         height={40}
                     />
