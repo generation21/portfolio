@@ -1,0 +1,96 @@
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50rem;
+    height: 40rem;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding: 20px;
+    border-radius: 1rem;
+    gap: 4rem;
+}
+
+.image_container {
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+
+.animated_image {
+    position: absolute;
+    top: 50%;
+    border-radius: 50%; /* 원 모양으로 만들기 위해 반지름 값을 50%로 설정 */
+    border: 1px solid var(--color-accent);
+    width: 100%;
+    height: auto;
+
+    border-radius: 100%;
+    transform: translateY(-50%) scale(1); /* 초기 상태를 작은 원으로 설정 (scale 0) */
+    opacity: 0; /* 처음에 전혀 보이지 않게 설정 */
+    animation: grow-image 2s ease forwards;
+}
+
+@keyframes grow-image {
+    0% {
+        transform: scale(0) rotate(-360deg) translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg) translateY(-50%);
+        opacity: 1;
+    }
+}
+
+.introduce {
+    height: 100%;
+    width: 70%;
+    margin-top: 59rem;
+}
+
+.strong {
+    color: var(--color-accent);
+}
+
+.personal_info {
+    margin-top: 3rem;
+}
+
+span {
+    color: var(--color-text);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+li {
+    color: var(--color-accent);
+    margin: 0.6rem 0;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
