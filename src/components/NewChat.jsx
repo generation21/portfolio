@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "src/styles/NewChat.module.css";
 export default function NewChat({ handleOnClickIsOpen }) {
@@ -12,6 +12,14 @@ export default function NewChat({ handleOnClickIsOpen }) {
                     Join me to enrich your work journey!
                 </p>
                 <ContactUs handleOnClickIsOpen={handleOnClickIsOpen} />
+                <div className={styles.button_container}>
+                    <button
+                        className={styles.close_text}
+                        onClick={handleOnClickIsOpen}
+                    >
+                        Close
+                    </button>
+                </div>
             </div>
         </div>
     );
@@ -20,9 +28,16 @@ export default function NewChat({ handleOnClickIsOpen }) {
 export const ContactUs = ({ handleOnClickIsOpen }) => {
     const form = useRef();
 
+    const [email, setEmail] = useState({
+        name: "",
+        subject: "",
+        email: "",
+        message: "",
+    });
+    const [sendEmailText, setSendEmailText] = useState("Send");
     const sendEmail = (e) => {
         e.preventDefault();
-
+        setSendEmailText("Processing");
         emailjs
             .sendForm(
                 "service_s21ror3",
@@ -32,46 +47,62 @@ export const ContactUs = ({ handleOnClickIsOpen }) => {
             )
             .then(
                 (result) => {
-                    console.log(result.text);
+                    setSendEmailText("Success");
                 },
                 (error) => {
-                    console.log(error.text);
+                    setSendEmailText("Error");
                 }
             );
+
+        setTimeout(() => {
+            setSendEmailText("Send");
+        }, 5000);
     };
 
+    const handleOnChane = (e, target) => {
+        setEmail((prev) => ({ ...prev, [target]: e.target.value }));
+    };
     return (
-        <form
-            ref={form}
-            onSubmit={sendEmail}
-            style={{ width: "100%", height: "100%", marginTop: "1rem" }}
-        >
+        <form ref={form} onSubmit={sendEmail} className={styles.form_container}>
             <div className={styles.text_container}>
-                <p className={styles.text}>Title</p>
-                <input type="text" name="title" className={styles.title} />
+                <p className={styles.text}>Name</p>
+                <input
+                    type="text"
+                    name="name"
+                    className={styles.input_text}
+                    value={email.name}
+                    onChange={(e) => handleOnChane(e, "name")}
+                />
+                <p className={styles.text}>Subject</p>
+                <input
+                    type="text"
+                    name="subject"
+                    className={styles.input_text}
+                    value={email.subject}
+                    onChange={(e) => handleOnChane(e, "subject")}
+                />
                 <p className={styles.text}>Email</p>
                 <input
                     type="email"
-                    name="user_email"
-                    className={styles.email}
+                    name="email"
+                    className={styles.input_text}
+                    value={email.email}
+                    onChange={(e) => handleOnChane(e, "email")}
                 />
             </div>
             <div className={styles.message_container}>
                 <p className={styles.text}>Message</p>
-                <textarea name="message" className={styles.message} />
-            </div>
-            <div className={styles.button_container}>
+                <textarea
+                    name="message"
+                    className={styles.message}
+                    value={email.message}
+                    onChange={(e) => handleOnChane(e, "message")}
+                />
                 <input
                     type="submit"
-                    value="Send"
+                    value={sendEmailText}
                     className={styles.send_text}
                 />
-                <button
-                    className={styles.close_text}
-                    onClick={handleOnClickIsOpen}
-                >
-                    Close
-                </button>
             </div>
         </form>
     );
