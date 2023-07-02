@@ -8,6 +8,7 @@ import { RiBookletFill } from "react-icons/ri";
 import { SiTistory } from "react-icons/si";
 import styles from "src/styles/NavigationBar.module.css";
 import NewChat from "./NewChat";
+import Contact from "./Contact";
 
 export default function NavigationBar({ pathname }) {
     const portfolios = [
@@ -33,15 +34,19 @@ export default function NavigationBar({ pathname }) {
         },
     ];
 
-    const [isOpen, setIsOpen] = useState(false);
+    const [isNewChatOpen, setIsNewChatOpen] = useState(false);
+    const [isContactOpen, setIsContactOpen] = useState(false);
     const handleOnClickIsOpen = () => {
-        setIsOpen(false);
+        setIsNewChatOpen(false);
+    };
+    const handleOnClickContact = () => {
+        setIsContactOpen(false);
     };
 
     return (
         <nav className={styles.navigation}>
             <div>
-                {isOpen && (
+                {isNewChatOpen && (
                     <NewChat
                         key={"newChat"}
                         handleOnClickIsOpen={handleOnClickIsOpen}
@@ -51,7 +56,7 @@ export default function NavigationBar({ pathname }) {
                     <button
                         className={styles.newchat}
                         onClick={() => {
-                            setIsOpen(true);
+                            setIsNewChatOpen(true);
                         }}
                     >
                         <FaPlus />
@@ -71,7 +76,12 @@ export default function NavigationBar({ pathname }) {
                 ))}
             </div>
             <div className={styles.about}>
-                <button className={styles.button}>
+                <button
+                    className={styles.button}
+                    onClick={() => {
+                        setIsContactOpen(true);
+                    }}
+                >
                     <img
                         src="/image/favicon.ico"
                         alt="profile"
@@ -80,6 +90,12 @@ export default function NavigationBar({ pathname }) {
                     />
                     <p className={styles.title}>홍승범</p>
                 </button>
+                {isContactOpen && (
+                    <Contact
+                        key={"Contact"}
+                        handleOnClickIsOpen={handleOnClickContact}
+                    />
+                )}
                 <div className={styles.items}>
                     <Link
                         to={
