@@ -52,26 +52,26 @@ export default function Information({ handleOnClickIsOpen }) {
                     <h2 className={styles.personal_info}>PERSONAL INFO</h2>
                     <ul className={styles.list}>
                         <li>
-                            <span>Name: </span>
+                            <span className={styles.text}>Name: </span>
                             홍승범
                         </li>
                         <li>
-                            <span>Age: </span>
+                            <span className={styles.text}>Age: </span>
                             30, 1994.12
                         </li>
 
                         <li>
-                            <span>Phone: </span>
+                            <span className={styles.text}>Phone: </span>
                             010.7108.8511
                         </li>
 
                         <li>
-                            <span>Email: </span>
+                            <span className={styles.text}>Email: </span>
                             qbration21@gmail.com
                         </li>
 
                         <li>
-                            <span>Address: </span>
+                            <span className={styles.text}>Address: </span>
                             서울시 서대문구
                         </li>
                     </ul>
