@@ -23,15 +23,12 @@
 .chat_input {
     flex: 1;
     border: none;
-    border-radius: 4px;
-    padding: 10px;
+    padding-left: 10px;
     font-size: 1rem;
     background-color: var(--color-primary-variant);
     outline: none;
-    caret-color: var(--color-text);
     color: var(--color-text);
     resize: none; /* 크기 조절 비활성화 */
-    height: 50px;
 }
 .chat_input::placeholder {
     text-align: left;
