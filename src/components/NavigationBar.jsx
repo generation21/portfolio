@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ABOUT_PATH, HOME_PATH, PROJECTS_PATH, SKILLS_PATH } from "src/App";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { BiMessage } from "react-icons/bi";
@@ -10,7 +10,11 @@ import styles from "src/styles/NavigationBar.module.css";
 import NewChat from "./NewChat";
 import Information from "./Information";
 
-export default function NavigationBar({ pathname }) {
+export default function NavigationBar({
+    handleOnClickIsOpen,
+    handleOnClickInfor,
+}) {
+    const { pathname } = useLocation();
     const portfolios = [
         {
             title: "Tell me about SB",
@@ -34,30 +38,13 @@ export default function NavigationBar({ pathname }) {
         },
     ];
 
-    const [isNewChatOpen, setIsNewChatOpen] = useState(false);
-    const [isContactOpen, setIsContactOpen] = useState(false);
-    const handleOnClickIsOpen = () => {
-        setIsNewChatOpen(false);
-    };
-    const handleOnClickContact = () => {
-        setIsContactOpen(false);
-    };
-
     return (
         <nav className={styles.navigation}>
             <div>
-                {isNewChatOpen && (
-                    <NewChat
-                        key={"newChat"}
-                        handleOnClickIsOpen={handleOnClickIsOpen}
-                    />
-                )}
                 <div className={styles.menue}>
                     <button
                         className={styles.newchat}
-                        onClick={() => {
-                            setIsNewChatOpen(true);
-                        }}
+                        onClick={handleOnClickIsOpen}
                     >
                         <FaPlus />
                         New chat
@@ -68,20 +55,32 @@ export default function NavigationBar({ pathname }) {
                 </div>
                 {portfolios.map((project, index) => (
                     <Link to={project.path}>
-                        <div key={index} className={styles.container}>
-                            {project.icon}
-                            <p className={styles.title}>{project.title}</p>
+                        <div
+                            key={index}
+                            className={`${styles.container} ${
+                                pathname === project.path && styles.active
+                            }  `}
+                        >
+                            <span
+                                className={`${styles.icon_contain} ${
+                                    pathname === project.path && styles.active
+                                }  `}
+                            >
+                                {project.icon}
+                            </span>
+                            <p
+                                className={`${styles.title} ${
+                                    pathname === project.path && styles.active
+                                }  `}
+                            >
+                                {project.title}
+                            </p>
                         </div>
                     </Link>
                 ))}
             </div>
             <div className={styles.about}>
-                <button
-                    className={styles.button}
-                    onClick={() => {
-                        setIsContactOpen(true);
-                    }}
-                >
+                <button className={styles.button} onClick={handleOnClickInfor}>
                     <img
                         src="/image/favicon.ico"
                         alt="profile"
@@ -90,12 +89,7 @@ export default function NavigationBar({ pathname }) {
                     />
                     <p className={styles.title}>홍승범</p>
                 </button>
-                {isContactOpen && (
-                    <Information
-                        key={"Contact"}
-                        handleOnClickIsOpen={handleOnClickContact}
-                    />
-                )}
+
                 <div className={styles.items}>
                     <Link
                         to={
