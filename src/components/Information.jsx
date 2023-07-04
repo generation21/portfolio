@@ -43,11 +43,11 @@ export default function Information({ handleOnClickIsOpen }) {
                 <section className={styles.introduce}>
                     <h2>HI! HOW ARE YOU?</h2>
                     <h1>I'M {<TypeItComponent />}</h1>
-                    안녕하세요, 저는 홍승범입니다.
+                    안녕하세요 최선을 넘어 최상을 위해 노력하는 개발자
+                    홍승범입니다.
                     <p>
-                        맡은 일에 최선을 다하는 책임감과 그 이상의 결과를 위해
-                        노력하는 개발자입니다. 하루 하루 격변하는 지금 매일
-                        새로운 것을 도전하고 있습니다.
+                        빠르게 변화하는 시대의 흐름에 따라 새로운 것들을 익히며
+                        '어제보다 나은 나'로 계속 성장해가고있습니다.
                     </p>
                     <h2 className={styles.personal_info}>PERSONAL INFO</h2>
                     <ul className={styles.list}>
