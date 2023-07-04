@@ -22,11 +22,11 @@ export default function Home() {
     const textClass = index !== 2 ? styles.text : styles.endText;
 
     return (
-        <div className={styles.home}>
+        <section className={styles.home}>
             <RiOpenaiFill className={styles.icon} />
             <h1 className={styles.fixedText}>I'm</h1>
 
             <h1 className={textClass}>{phrases[index]}</h1>
-        </div>
+        </section>
     );
 }
