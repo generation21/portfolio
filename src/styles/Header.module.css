@@ -7,4 +7,5 @@
     background-color: var(--color-black);
     border-radius: 0.725rem;
     padding: 0rem 0.1rem;
+    z-index: 10;
 }

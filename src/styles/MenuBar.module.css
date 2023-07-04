@@ -23,4 +23,9 @@
 
 .title {
     color: var(--color-text-secondary);
+    transition: all 300ms ease;
+}
+.title.active {
+    color: var(--color-accent);
+    font-weight: bold;
 }
