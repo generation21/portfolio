@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SkillCard from "src/components/SkillCard";
+import SkillCard from "src/pages/About/SkillCard";
 import { AiOutlineHtml5, AiFillGithub } from "react-icons/ai";
 import { BiLogoReact } from "react-icons/bi";
 import { FaPython } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { SiPytorch, SiFastapi } from "react-icons/si";
 import styles from "src/styles/About.module.css";
 import axios from "axios";
+import Experience from "src/pages/About/Experience";
 
 export default function About() {
     const [data, setData] = useState(null);
@@ -30,7 +31,7 @@ export default function About() {
         return <div>Loading...</div>;
     }
     return (
-        <section className={styles.about}>
+        <section className={styles.skill}>
             <h1 className={styles.title}>MY SKILLS</h1>
             <div className={styles.container}>
                 {data.map((item) => (
@@ -42,6 +43,7 @@ export default function About() {
                     />
                 ))}
             </div>
+            <Experience />
         </section>
     );
 }
