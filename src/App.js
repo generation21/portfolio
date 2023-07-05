@@ -10,7 +10,7 @@ import NewChat from "./components/NewChat";
 export const HOME_PATH = "/home";
 export const ABOUT_PATH = "/about";
 export const PROJECTS_PATH = "/projects";
-export const SKILLS_PATH = "/skills";
+export const PAPERS_PATH = "/papers";
 
 function App() {
     const [isNewChatOpen, setIsNewChatOpen] = useState(false);

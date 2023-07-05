@@ -1,1 +1,30 @@
-["EXPERIENCE & EDUCATION"]
+{
+    "office": [
+        {
+            "title": "cocone",
+            "time": "2017.09 - 2018.03",
+            "role": "Deep learning Researcher",
+            "description": "에이전시 회사인 코너크리에이티브에서 사이트 제작과 유지보수 운영을 담당하였습니다. 삼성, 기아, 캐논 등 대기업 솔루션 경험을 익히며 폭넓은 인터렉션 제작 능력을 키웠습니다."
+        },
+        {
+            "title": "hutom",
+            "time": "2017.09 - 2018.03",
+            "role": "Deep learning Researcher",
+            "description": "에이전시 회사인 코너크리에이티브에서 사이트 제작과 유지보수 운영을 담당하였습니다. 삼성, 기아, 캐논 등 대기업 솔루션 경험을 익히며 폭넓은 인터렉션 제작 능력을 키웠습니다."
+        }
+    ],
+    "school": [
+        {
+            "title": "inha universiy",
+            "time": "2017.09 - 2018.03",
+            "role": "Deep learning Researcher",
+            "description": "에이전시 회사인 코너크리에이티브에서 사이트 제작과 유지보수 운영을 담당하였습니다. 삼성, 기아, 캐논 등 대기업 솔루션 경험을 익히며 폭넓은 인터렉션 제작 능력을 키웠습니다."
+        },
+        {
+            "title": "inha universiy",
+            "time": "2017.09 - 2018.03",
+            "role": "Deep learning Researcher",
+            "description": "에이전시 회사인 코너크리에이티브에서 사이트 제작과 유지보수 운영을 담당하였습니다. 삼성, 기아, 캐논 등 대기업 솔루션 경험을 익히며 폭넓은 인터렉션 제작 능력을 키웠습니다."
+        }
+    ]
+}

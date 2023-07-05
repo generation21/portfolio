@@ -11,7 +11,6 @@ import styles from "src/styles/SkillCard.module.css";
  * @type
  */
 export default function SkillCard({ title, icon, descriptions }) {
-    console.log(descriptions);
     return (
         <article className={styles.skill_card}>
             <span></span>

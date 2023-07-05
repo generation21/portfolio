@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
+import Papers from "./pages/Papers";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
             { index: true, path: "home", element: <Home /> },
             { path: "about", element: <About /> },
             { path: "projects", element: <Projects /> },
-            { path: "skills", element: <Skills /> },
+            { path: "papers", element: <Papers /> },
         ],
     },
 ]);

@@ -8,7 +8,14 @@ export default function MenuBar({ title, path, icon }) {
     return (
         <Link to={path} className={styles.link}>
             <div className={styles.item}>
-                <div className={styles.icon}>{icon}</div>
+                <div
+                    className={`${styles.icon} ${
+                        pathname.replace("/", "") === title.toLowerCase() &&
+                        styles.active
+                    }`}
+                >
+                    {icon}
+                </div>
                 <p
                     className={`${styles.title} ${
                         pathname.replace("/", "") === title.toLowerCase() &&

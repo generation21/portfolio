@@ -19,6 +19,7 @@
 .icon {
     font-size: 0.8rem;
     color: var(--color-text-secondary);
+    transition: all 300ms ease;
 }
 
 .title {
@@ -27,5 +28,7 @@
 }
 .title.active {
     color: var(--color-accent);
-    font-weight: bold;
+}
+.icon.active {
+    transform: rotate(-30deg);
 }

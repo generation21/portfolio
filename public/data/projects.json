@@ -1,0 +1,26 @@
+[
+    {
+        "title": "diet",
+        "time": "2020.12 - 2020.12",
+        "description": "dsalfdk",
+        "image": "image/instrument_pose_estimation.png",
+        "teckStack": ["react", "html", "pose estimation"],
+        "category": "side-project"
+    },
+    {
+        "title": "diet",
+        "time": "2020.12 - 2020.12",
+        "description": "dsalfdk",
+        "image": "image/instrument_pose_estimation.png",
+        "teckStack": ["react", "html", "pose estimation"],
+        "category": "deep-learning challenge"
+    },
+    {
+        "title": "diet",
+        "time": "2020.12 - 2020.12",
+        "description": "dsalfdk",
+        "image": "image/instrument_pose_estimation.png",
+        "teckStack": ["react", "html", "pose estimation"],
+        "category": "company-project"
+    }
+]
