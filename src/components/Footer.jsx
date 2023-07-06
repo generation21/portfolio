@@ -4,7 +4,7 @@ import { RiSendPlane2Fill } from "react-icons/ri";
 import useStringSimilarity from "src/hooks/string-smiliarility";
 import { useNavigate } from "react-router-dom";
 export default function Footer() {
-    const stringList = ["home", "about", "projects", "paper"];
+    const stringList = ["home", "about", "projects", "papers"];
     const [value, setValue] = useState("");
     const navigation = useNavigate();
     const getBestMatch = useStringSimilarity();
