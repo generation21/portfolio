@@ -58,9 +58,9 @@
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    transition: all 250ms ease-out;
-
+    grid-template-columns: repeat(3, minmax(250px, 300px));
+    grid-gap: 1rem;
     width: 80%;
+    align-items: center;
+    justify-content: center;
 }

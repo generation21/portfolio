@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import axios from "axios";
-import ProjectCard from "./Projects/ProjectCard";
+import PaperCard from "./Papers/PaperCard";
 import styles from "src/styles/Papers.module.css";
 
 export default function Pages() {
@@ -70,7 +70,7 @@ export default function Pages() {
                     {data.map((item) => {
                         if (activeCategory === "All") {
                             return (
-                                <ProjectCard
+                                <PaperCard
                                     title={item.title}
                                     task={item.task}
                                     time={item.time}
@@ -82,7 +82,7 @@ export default function Pages() {
                             );
                         } else if (activeCategory === item.category) {
                             return (
-                                <ProjectCard
+                                <PaperCard
                                     title={item.title}
                                     task={item.task}
                                     time={item.time}

@@ -1,12 +1,12 @@
 .project {
     position: relative;
     width: 300px;
-    height: 250px;
+    height: 450px;
 }
 
 .project__img {
     width: 300px;
-    height: 250px;
+    height: 450px;
 }
 
 .project__metadata {

@@ -1,6 +1,6 @@
-import styles from "src/styles/ProjectCard.module.css";
+import styles from "src/styles/PaperCard.module.css";
 
-const ProjectCard = ({ title, task, time, from, image, link, techStack }) => {
+const PaperCard = ({ title, task, time, from, image, link, techStack }) => {
     return (
         <div className={styles.project}>
             <a href={link} target="_blank">
@@ -23,4 +23,4 @@ const ProjectCard = ({ title, task, time, from, image, link, techStack }) => {
     );
 };
 
-export default ProjectCard;
+export default PaperCard;
