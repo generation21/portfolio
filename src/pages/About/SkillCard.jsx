@@ -18,7 +18,7 @@ export default function SkillCard({ title, icon, descriptions }) {
             <span></span>
             <span></span>
             <h3>
-                <span>{icon} </span>: {title}
+                <span className={styles.icon}>{icon} </span>: {title}
             </h3>
             <ul className={styles.container}>
                 {descriptions.map((description, index) => {

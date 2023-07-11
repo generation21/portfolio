@@ -1,12 +1,13 @@
 .footer {
-    position: fixed;
+    /* position: fixed;
     bottom: 3%;
-    left: 50%;
-    transform: translateX(-50%) translateX(var(--side-bar-half-width));
+    left: 50%; */
+    /* transform: translateX(-50%) translateX(var(--side-bar-half-width)); */
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 90;
 }
 /* 채팅 입력창과 전송 버튼을 감싸는 컨테이너 */
 .chat_input_container {

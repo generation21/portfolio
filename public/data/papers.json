@@ -1,0 +1,103 @@
+[
+    {
+        "title": "VIPrior 3rd",
+        "time": "2022.6 - 2022.8",
+        "task": "12th place",
+        "image": "image/papers/VIPrior.png",
+        "teckStack": [
+            "object detection",
+            "self supervised learning",
+            "datasets"
+        ],
+        "link": "https://www.notion.so/Visual-Inductive-Priors-for-Data-Efficient-Computer-Vision-ObjectDetection-a5417a108dec41be8e60cf96b2785eb6?pvs=4",
+        "from": "ECCV2022",
+        "category": "AI-Challenge"
+    },
+    {
+        "title": "Surgical Scene Segmentation Using Semantic Image Synthesis with a Virtual Surgery Environment ",
+        "time": "2022.9",
+        "task": "3 author",
+        "image": "image/papers/MICCAI2022.png",
+        "teckStack": [
+            "GAN",
+            "datasets",
+            "semantic segmentation",
+            "object detection"
+        ],
+        "link": "https://sisvse.github.io/",
+        "from": "MICCAI2022",
+        "category": "Paper"
+    },
+
+    {
+        "title": "Self Supervised Knowledge Transfer via Loosely Supervised Auxiliary Tasks",
+        "time": "2022.12",
+        "task": "frist author",
+        "image": "image/papers/SSKT.png",
+        "teckStack": ["Transfer Learning"],
+        "link": "https://arxiv.org/abs/2110.12696",
+        "from": "WACV2022",
+        "category": "Paper"
+    },
+    {
+        "title": "Rethinking Generalization Performance of Surgical Phase Recognition with Expert-Generated Annotations",
+        "time": "2021.11",
+        "task": "frist author",
+        "image": "image/papers/NeurIPS2021.png",
+        "teckStack": ["phase recognition", "datasets"],
+        "link": "https://arxiv.org/abs/2110.11626",
+        "from": "R2C@NeurIPS2021",
+        "category": "Paper"
+    },
+    {
+        "title": "HeiSurf: HeiChole Surgical Workflow Analysis and Full Scene Segmentation",
+        "time": "2021.5",
+        "task": "3rd, 1st",
+        "image": "image/papers/challenges/heiChole.png",
+        "teckStack": ["phase recognition", "semantic segmentation"],
+        "link": "https://arxiv.org/abs/2110.11626",
+        "from": "MICCAI2021",
+        "category": "AI-Challenge"
+    },
+
+    {
+        "title": "PETRAW: PEg TRAnsfer Workflow recognition by different modalities",
+        "time": "2021.5",
+        "task": "",
+        "image": "image/papers/challenges/petraw.png",
+        "teckStack": ["phase recognition", "multimodal learning"],
+        "link": "https://www.synapse.org/#!Synapse:syn25147789/wiki/608848",
+        "from": "MICCAI2021",
+        "category": "AI-Challenge"
+    },
+    {
+        "title": "Epic Kitchen Challenge",
+        "time": "2020.5",
+        "task": "14th, 1st",
+        "image": "image/papers/challenges/EpicKitchens.png",
+        "teckStack": ["action recognition", "object detection"],
+        "link": "https://epic-kitchens.github.io/2020-55.html",
+        "from": "CVPR2020",
+        "category": "AI-Challenge"
+    },
+    {
+        "title": "Semi-Supervised Object Detection With Sparsely Annotated Dataset",
+        "time": "2020.7",
+        "task": "second author",
+        "image": "image/papers/ICIP2020.png",
+        "teckStack": ["object detection", "semi-supervised"],
+        "link": "https://ieeexplore.ieee.org/abstract/document/9506790",
+        "from": "ICIP2020",
+        "category": "Paper"
+    },
+    {
+        "title": "Deep Mutual Learning with Pretrained CNNs using Inhomogeneous Datasets",
+        "time": "2020.3",
+        "task": "frist author",
+        "image": "image/papers/CKAIA2020.png",
+        "teckStack": ["Mutual learning", "Transfer Learning"],
+        "link": "https://drive.google.com/file/d/147gmzAxgowzGiuFnjQkafy0kR5x-QSsU/view",
+        "from": "CKAIA2020",
+        "category": "Paper"
+    }
+]

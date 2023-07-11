@@ -2,20 +2,16 @@ import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 import ProjectCard from "./Projects/ProjectCard";
-import styles from "src/styles/Projects.module.css";
+import styles from "src/styles/Papers.module.css";
 
 export default function Pages() {
-    const categorys = [
-        "company-project",
-        "deep-learning challenge",
-        "side-project",
-    ];
+    const categorys = ["Paper", "AI-Challenge"];
     const [activeCategory, setActiveCategory] = useState("All");
     const [data, setData] = useState(null);
 
     useEffect(() => {
         axios
-            .get("data/projects.json")
+            .get("data/papers.json")
             .then((response) => setData(response.data))
             .catch((error) => console.error("Error:", error));
     }, []);
@@ -28,66 +24,77 @@ export default function Pages() {
     }
     return (
         <section className={styles.section}>
-            <h1 className={styles.title}>
-                MY <span>PROJECTS</span>
-            </h1>
-            <ul className={styles.categories}>
-                <li>
-                    <button
-                        className={`${styles.category} ${
-                            activeCategory === "All" &&
-                            styles["category--selected"]
-                        }`}
-                        value={"All"}
-                        onClick={handleOnClickCategory}
-                    >
-                        All
-                        <span className={styles.category__count}>
-                            {data.length}
-                        </span>
-                    </button>
-                </li>
-                {categorys.map((item) => (
+            <div className={styles.papers_container}>
+                <h1 className={styles.title}>
+                    MY <span>Papers & Challenges</span>
+                </h1>
+                <ul className={styles.categories}>
                     <li>
                         <button
-                            key={item}
-                            value={item}
                             className={`${styles.category} ${
-                                activeCategory === item &&
+                                activeCategory === "All" &&
                                 styles["category--selected"]
                             }`}
+                            value={"All"}
                             onClick={handleOnClickCategory}
                         >
-                            {item}
+                            All
                             <span className={styles.category__count}>
-                                {data.filter((x) => x.category === item).length}
+                                {data.length}
                             </span>
                         </button>
                     </li>
-                ))}
-            </ul>
-            <div className={styles.projects}>
-                {data.map((item) => {
-                    if (activeCategory === "All") {
-                        return (
-                            <ProjectCard
-                                title={item.title}
-                                description={item.description}
-                                techStack={item.teckStack}
-                                image={item.image}
-                            />
-                        );
-                    } else if (activeCategory === item.category) {
-                        return (
-                            <ProjectCard
-                                title={item.title}
-                                description={item.description}
-                                techStack={item.teckStack}
-                                image={item.image}
-                            />
-                        );
-                    }
-                })}
+                    {categorys.map((item) => (
+                        <li>
+                            <button
+                                key={item}
+                                value={item}
+                                className={`${styles.category} ${
+                                    activeCategory === item &&
+                                    styles["category--selected"]
+                                }`}
+                                onClick={handleOnClickCategory}
+                            >
+                                {item}
+                                <span className={styles.category__count}>
+                                    {
+                                        data.filter((x) => x.category === item)
+                                            .length
+                                    }
+                                </span>
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+                <div className={styles.projects}>
+                    {data.map((item) => {
+                        if (activeCategory === "All") {
+                            return (
+                                <ProjectCard
+                                    title={item.title}
+                                    task={item.task}
+                                    time={item.time}
+                                    techStack={item.teckStack}
+                                    image={item.image}
+                                    link={item.link}
+                                    from={item.from}
+                                />
+                            );
+                        } else if (activeCategory === item.category) {
+                            return (
+                                <ProjectCard
+                                    title={item.title}
+                                    task={item.task}
+                                    time={item.time}
+                                    techStack={item.teckStack}
+                                    image={item.image}
+                                    link={item.link}
+                                    from={item.from}
+                                />
+                            );
+                        }
+                    })}
+                </div>
             </div>
         </section>
     );
