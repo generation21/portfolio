@@ -136,7 +136,7 @@ export default function NavigationBar({
                         >
                             <BsGithub className={styles.icon} />
                         </Link>
-                        <Link>
+                        <Link to={"https://qbnet.tistory.com/"} target="_blank">
                             <SiTistory className={styles.icon} />
                         </Link>
                     </div>
