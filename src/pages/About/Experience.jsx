@@ -54,7 +54,7 @@ export default function Experience() {
                             className={styles.about__container__list}
                         >
                             <div className={styles.icon_after}>
-                                {icons.office}
+                                {icons.school}
                             </div>
                             <div className={styles.information__container}>
                                 <span className={styles.time}>{item.time}</span>

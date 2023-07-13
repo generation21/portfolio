@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ABOUT_PATH, HOME_PATH, PROJECTS_PATH, PAPERS_PATH } from "src/App";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
@@ -14,7 +14,10 @@ export default function NavigationBar({
     handleOnClickIsOpen,
     handleOnClickInfor,
 }) {
-    const [isSideBar, setIsSideBar] = useState(false);
+    const [isSideBar, setIsSideBar] = useState(
+        window.matchMedia("(max-width: 768px)").matches
+    );
+
     const { pathname } = useLocation();
     const portfolios = [
         {
@@ -38,9 +41,23 @@ export default function NavigationBar({
             icon: <BiMessage className={styles.icon} />,
         },
     ];
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSideBar(!window.matchMedia("(max-width: 768px)").matches);
+        };
 
+        window.addEventListener("resize", handleResize);
+
+        // Cleanup event listener on unmount
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     const handleOnClickSide = () => {
         setIsSideBar((prev) => !prev);
+    };
+    const handleOnClickSideMediea = () => {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            setIsSideBar((prev) => !prev);
+        }
     };
 
     if (isSideBar) {
@@ -80,7 +97,10 @@ export default function NavigationBar({
                         </button>
                     </div>
                     {portfolios.map((project, index) => (
-                        <Link to={project.path}>
+                        <Link
+                            to={project.path}
+                            onClick={handleOnClickSideMediea}
+                        >
                             <div
                                 key={index}
                                 className={`${styles.container} ${

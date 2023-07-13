@@ -21,3 +21,8 @@
     margin: 0;
     width: 80%;
 }
+@media screen and (max-width: 768px) {
+    .title {
+        margin-top: 3.5rem;
+    }
+}

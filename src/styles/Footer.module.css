@@ -51,3 +51,8 @@
     margin-top: 3px;
     color: var(--color-text);
 }
+@media screen and (max-width: 768px) {
+    .chat_input_container {
+        width: 80%;
+    }
+}

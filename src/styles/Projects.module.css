@@ -70,3 +70,16 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 768px) {
+    .title {
+        margin-top: 3.5rem;
+    }
+    .categories {
+        flex-direction: column;
+    }
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+}

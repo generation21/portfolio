@@ -76,3 +76,15 @@
     top: 9px;
     opacity: 0.8;
 }
+@media screen and (max-width: 768px) {
+    .about {
+        flex-wrap: wrap;
+    }
+    .about__container {
+        flex-direction: column;
+    }
+
+    .about__container__list {
+        flex-direction: column;
+    }
+}
