@@ -11,6 +11,7 @@
 }
 .title {
     margin-top: 10rem;
+    font-size: 4rem;
 }
 .accent {
     color: var(--color-accent);
@@ -70,6 +71,7 @@
 @media screen and (max-width: 768px) {
     .title {
         margin-top: 3.5rem;
+        font-size: 2rem;
     }
     .categories {
         flex-direction: column;

@@ -7,8 +7,6 @@ import { FaPlus } from "react-icons/fa";
 import { RiBookletFill } from "react-icons/ri";
 import { SiTistory } from "react-icons/si";
 import styles from "src/styles/NavigationBar.module.css";
-import NewChat from "./NewChat";
-import Information from "./Information";
 
 export default function NavigationBar({
     handleOnClickIsOpen,
