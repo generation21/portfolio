@@ -12,6 +12,9 @@
 .title {
     margin-top: 10rem;
 }
+.accent {
+    color: var(--color-accent);
+}
 .categories {
     display: flex;
     flex-direction: row;

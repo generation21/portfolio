@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styles from "src/styles/NewChat.module.css";
+import { HiOutlineMailOpen } from "react-icons/hi";
+
 export default function NewChat({ handleOnClickIsOpen }) {
     return (
         <div className={styles.dialog} onClick={handleOnClickIsOpen}>
@@ -11,6 +13,7 @@ export default function NewChat({ handleOnClickIsOpen }) {
                 <p className={styles.dialog_title}>
                     Join me to enrich your work journey!
                 </p>
+                <HiOutlineMailOpen className={styles.icon} />
                 <ContactUs handleOnClickIsOpen={handleOnClickIsOpen} />
                 <div className={styles.button_container}>
                     <button

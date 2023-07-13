@@ -26,7 +26,8 @@ export default function Pages() {
         <section className={styles.section}>
             <div className={styles.papers_container}>
                 <h1 className={styles.title}>
-                    MY <span>Papers & Challenges</span>
+                    MY{" "}
+                    <span className={styles.accent}>Papers & Challenges</span>
                 </h1>
                 <ul className={styles.categories}>
                     <li>

@@ -26,7 +26,7 @@ export default function Projects() {
         <section className={styles.projects_container}>
             <div className={styles.section}>
                 <h1 className={styles.title}>
-                    MY <span>PROJECTS</span>
+                    MY <span className={styles.accent}>PROJECTS</span>
                 </h1>
                 <ul className={styles.categories}>
                     <li>

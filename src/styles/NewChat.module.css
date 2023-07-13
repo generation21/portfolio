@@ -15,6 +15,10 @@
     font-weight: bold;
     margin-bottom: 1rem;
 }
+.icon {
+    font-size: 8rem;
+    transform: rotate(30deg);
+}
 .container {
     display: flex;
     flex-direction: column;
